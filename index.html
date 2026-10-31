@@ -653,7 +653,7 @@ body.unetmine-daily-home #welcomeScreen{
 <div id="welcomeScreen">
   <div class="welcome-card">
     <div class="welcome-brand">UNetMine <span style="color:#91a69d">• Virtual Mining</span></div>
-<div class="unm-preview-stamp" role="status">UPDATED PUBLIC PREVIEW • 31 OCT 2026</div>
+<div class="unm-preview-stamp" role="status">UNETMINE DEMO • REVIEW 4</div>
 <div class="unm-preview-clarifier"><strong>Simulation only — no cryptocurrency is being mined or earned.</strong> Try the model before choosing any real purchase. Illustrative inputs can be edited. No registration or payment required.</div>
     <div class="welcome-title">See what a real miner would produce.<br>Without owning one.</div>
     <div class="welcome-copy">
@@ -687,7 +687,7 @@ body.unetmine-daily-home #welcomeScreen{
 <div id="demoChoiceScreen">
   <div class="demo-choice-card">
     <div class="demo-choice-brand">UNetMine • Interactive Simulation</div>
-<div class="unm-preview-stamp">UPDATED PUBLIC PREVIEW • 31 OCT 2026</div>
+<div class="unm-preview-stamp">UNETMINE DEMO • REVIEW 4</div>
 <div class="unm-preview-clarifier">Mining output and prices are <strong>simulated estimates, not earnings</strong>. The S21 Pro example uses 3,510 W at C$0.07/kWh = <strong>C$5.90/day electricity</strong>.</div>
     <h1>Choose the miner you want to experience.</h1>
     <div class="demo-choice-intro">Pick a real ASIC profile. UNetMine will show what that machine would cost to own, consume in power, produce in crypto, and leave as modeled NET output after costs.</div>
@@ -1217,10 +1217,10 @@ body.unetmine-daily-home #welcomeScreen{
   <div class="ledger-head">
     <div>
       <div class="eyebrow">Production Ledger</div>
-      <h2>Permanent daily virtual-miner record</h2>
+      <h2>Daily virtual-miner history • saved in this browser</h2>
       <p>When you record Match, Adjust, or Pass, UNetMine freezes that day’s modeled economics. Later price or network changes do not rewrite the historical row.</p>
     </div>
-    <div class="pill">ACCOUNT + MINER HISTORY</div>
+    <div class="pill">LOCAL DEMO HISTORY</div>
   </div>
   <div class="ledger-summary">
     <div class="ledger-kpi"><small>Miner-days recorded</small><b id="ledgerDays">0</b></div>
@@ -1734,7 +1734,7 @@ window.onload=()=>{
 </script>
 
 
-<div class="modalback" id="exchangeModal"><div class="modal"><div class="eyebrow">Exchange Router</div><h2 style="margin-top:6px">Choose your purchase destination</h2><div class="sub">UNetMine remembers this preference for your local account. No credentials are requested or stored.</div><div class="exchoices"><div class="exchoice"><div class="exchoice-left"><b>Kraken</b><div class="exchoice-meta">Outbound handoff to Kraken's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Kraken')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>Coinbase</b><div class="exchoice-meta">Outbound handoff to Coinbase's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Coinbase')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>My exchange / Other</b><div class="exchoice-meta">Manual route. UNetMine shows the target; you open your preferred provider yourself.</div></div><button class="secondary" onclick="chooseExchange('Wallet / Other')">Choose</button></div></div><div class="router-disclosure"><strong>Prototype disclosure:</strong> no referral or affiliate tracking is active in this demo.</div><div class="actions"><button class="secondary" onclick="closeExchangeModal()">Close</button></div></div></div>\n<script>
+<div class="modalback" id="exchangeModal"><div class="modal"><div class="eyebrow">Exchange Router</div><h2 style="margin-top:6px">Choose your purchase destination</h2><div class="sub">UNetMine stores this preference in your browser. No exchange credentials are requested or stored.</div><div class="exchoices"><div class="exchoice"><div class="exchoice-left"><b>Kraken</b><div class="exchoice-meta">Outbound handoff to Kraken's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Kraken')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>Coinbase</b><div class="exchoice-meta">Outbound handoff to Coinbase's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Coinbase')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>My exchange / Other</b><div class="exchoice-meta">Manual route. UNetMine shows the target; you open your preferred provider yourself.</div></div><button class="secondary" onclick="chooseExchange('Wallet / Other')">Choose</button></div></div><div class="router-disclosure"><strong>Prototype disclosure:</strong> no referral or affiliate tracking is active in this demo.</div><div class="actions"><button class="secondary" onclick="closeExchangeModal()">Close</button></div></div></div>\n<script>
 /* UNetMine Alpha 1.1 — dual-demo shared engine overrides.
    Public showcases: S21 Pro/BTC + Z15/ZEC.
    BUY NET is outbound-only; settlement recording is separate. */
