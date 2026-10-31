@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>UNetMine — Portable Mining Dashboard</title>
+<title>UNetMine — Interactive Mining Simulation (Demo)</title>
 <style>
 :root{
   --bg:#08110f;--panel:#101b18;--panel2:#14231f;--line:#294139;
@@ -635,6 +635,15 @@ body.unetmine-daily-home #welcomeScreen{
 .unm-transfer-panel #unmImportStatus{color:#aef2c8;min-height:18px;white-space:pre-wrap}
 </style>
 
+<style id="unm-public-demo-style">
+.unm-public-notice{margin:16px 0 12px;padding:14px 17px;border-radius:13px;border:1px solid #467e68;background:#0c2a22;color:#d6f8e6;display:flex;flex-direction:column;gap:7px;line-height:1.5;font-size:13px}
+.unm-public-notice strong{letter-spacing:.035em;color:#91ffbc;font-size:13px}
+.unm-public-notice span{color:#d8f0e5}
+#accountOpenBtn,#accountChip,#accountModal,#saveDemoModal,#trialStatusBar,#subscriptionModal,#conversionCard,
+#billingAdapterModal,#readinessModal,#dataContractModal,#unmTransferStrip,
+.data-contract-strip,.billing-strip,.readiness-strip{display:none!important}
+@media(max-width:600px){.unm-public-notice{margin:12px 0;padding:12px;font-size:12px}}
+</style>
 </head>
 
 <body>
@@ -666,13 +675,13 @@ body.unetmine-daily-home #welcomeScreen{
       <button class="welcome-start" onclick="startFirstRun()">START LIVE DEMO</button>
       <button class="welcome-return" id="welcomeReturnBtn" onclick="closeWelcome()">RETURN TO DASHBOARD</button>
     </div>
-    <div class="welcome-note">Simulation and tracking only. UNetMine does not perform cryptocurrency mining, custody assets, or execute trades.</div>
+    <div class="welcome-note"><strong>Illustrative demo:</strong> No crypto is mined or earned. Prices and network inputs may be stale; actual purchases are entirely separate. UNetMine does not hold assets or execute trades.</div>
   </div>
 </div>
 
 <div id="demoChoiceScreen">
   <div class="demo-choice-card">
-    <div class="demo-choice-brand">UNetMine • Live Demo</div>
+    <div class="demo-choice-brand">UNetMine • Interactive Simulation</div>
     <h1>Choose the miner you want to experience.</h1>
     <div class="demo-choice-intro">Pick a real ASIC profile. UNetMine will show what that machine would cost to own, consume in power, produce in crypto, and leave as modeled NET output after costs.</div>
 
@@ -785,10 +794,14 @@ body.unetmine-daily-home #welcomeScreen{
 </div>
 
 <div class="wrap">
+<div class="unm-public-notice" role="note">
+<strong>INTERACTIVE SIMULATION • NOT REAL MINING OR EARNINGS</strong>
+<span>Explore a virtual ASIC and an optional self-directed coin-purchase target. Default coin prices, network data, hardware costs and power rates are <b>illustrative inputs</b>, not guaranteed live values. Refresh or edit inputs before comparing results. No account or payment is needed; local demo entries stay on this browser.</span>
+</div>
 <header>
- <div><div class="brand"><span>U</span>NetMine</div><div class="tag">Virtual mining. Real accumulation.</div></div>
+ <div><div class="brand"><span>U</span>NetMine</div><div class="tag">Virtual mining. Self-directed coin purchases.</div></div>
  <div class="account-head">
-  <div class="version-badge"><span class="version-dot"></span>ALPHA 2.6 • PORTABLE DEMO</div>
+  <div class="version-badge"><span class="version-dot"></span>PUBLIC DEMO • SIMULATED</div>
   <button class="account-btn" id="accountOpenBtn" onclick="openAccountModal()">CREATE ACCOUNT / SIGN IN</button>
   <div class="account-chip" id="accountChip">
     <div class="account-avatar" id="accountAvatar">U</div>
@@ -807,7 +820,7 @@ body.unetmine-daily-home #welcomeScreen{
     <button class="navbtn" onclick="showMachineLibrary()">MACHINE LIBRARY</button>
     <button id="navSetup" class="navbtn" onclick="showSetup()">EDIT SETUP</button>
     <button class="navbtn" onclick="openWelcome()">WELCOME</button>
-    <button class="navbtn" onclick="openAccountModal()">ACCOUNT</button>
+    
     <button class="navbtn" onclick="resetDemo()">RESET DEMO</button>
   </div>
   <div class="navhint">Daily use stays simple. Setup is available when you need it.</div>
@@ -847,7 +860,7 @@ body.unetmine-daily-home #welcomeScreen{
 
 <div id="conversionCard" class="conversion-card" style="display:none">
   <div class="conversion-eyebrow" id="conversionEyebrow">Your UNetMine trial</div>
-  <div class="conversion-title" id="conversionTitle">You’ve built something here.</div>
+  <div class="conversion-title" id="conversionTitle">Your virtual mining history</div>
   <div class="conversion-copy" id="conversionCopy"></div>
   <div class="conversion-metrics">
     <div class="conversion-metric"><small>Miner-days recorded</small><b id="conversionDays">0</b></div>
@@ -863,7 +876,7 @@ body.unetmine-daily-home #welcomeScreen{
 
 <div class="demo-banner">
   <div>
-    <strong>UNetMine Alpha 2.6</strong>
+    <strong>UNetMine Interactive Demo</strong>
     <span>UNetMine models ASIC mining economics and turns the modeled net output into a self-directed daily accumulation target.</span>
   </div>
   <div class="demo-chip">NO CUSTODY • NO MINER • NO AUTO-TRADE</div>
@@ -991,7 +1004,7 @@ body.unetmine-daily-home #welcomeScreen{
 
 <section class="hero">
  <div class="card">
-   <div class="status eyebrow"><i class="dot"></i> <span id="virtualStatus">Virtual S21 Pro — Online</span></div>
+   <div class="status eyebrow"><i class="dot"></i> <span id="virtualStatus">Virtual S21 Pro — Simulation</span></div>
    <h1 id="minerName">Antminer S21 Pro</h1><div class="sub" id="coinSub">SHA-256 • Bitcoin • virtual NET mining model</div>
    <div class="big" id="todayNet">0.00000000 <span class="unit">BTC NET TODAY</span></div>
    <div class="metrics">
@@ -1016,7 +1029,7 @@ body.unetmine-daily-home #welcomeScreen{
  <div class="card liveviz">
    <div class="pulse-head">
      <div class="eyebrow">Mining pulse</div>
-     <div class="live-badge"><i></i> MODEL RUNNING</div>
+     <div class="live-badge"><i></i> MODEL SIMULATION</div>
    </div>
    <div class="hash-display">
      <div class="num"><span id="pulseHash">234.0</span> <span id="pulseHashUnit">TH/s</span></div>
@@ -1026,10 +1039,10 @@ body.unetmine-daily-home #welcomeScreen{
     <svg viewBox="0 0 1000 80" preserveAspectRatio="none"><path d="M0 42 C80 42 90 15 155 42 S250 68 315 42 S410 16 475 42 S570 68 635 42 S730 16 795 42 S890 68 955 42 S1050 16 1115 42 S1210 68 1275 42 S1370 16 1435 42 S1530 68 1595 42 S1690 16 1755 42 S1850 68 1915 42 S2010 16 2075 42" fill="none" stroke="#61e7a8" stroke-width="2"/></svg>
     <svg viewBox="0 0 1000 80" preserveAspectRatio="none"><path d="M0 42 C80 42 90 15 155 42 S250 68 315 42 S410 16 475 42 S570 68 635 42 S730 16 795 42 S890 68 955 42 S1050 16 1115 42 S1210 68 1275 42 S1370 16 1435 42 S1530 68 1595 42 S1690 16 1755 42 S1850 68 1915 42 S2010 16 2075 42" fill="none" stroke="#61e7a8" stroke-width="1"/></svg>
    </div>
-   <div class="tickline"><span>NETWORK MODEL</span><span>NET OUTPUT CALCULATING</span><span>ONLINE</span></div>
+   <div class="tickline"><span>NETWORK MODEL</span><span>ESTIMATED NET OUTPUT</span><span>DEMO</span></div>
  </div>
  <div class="card">
-   <div class="pulse-head"><div class="eyebrow">Live accumulation</div><div class="live-badge"><i></i> ACTIVE</div></div>
+   <div class="pulse-head"><div class="eyebrow">Simulated accumulation</div><div class="live-badge"><i></i> SIMULATED</div></div>
    <div class="big coin-counter" style="font-size:35px" id="pulseCounter">0.00000000 <span class="unit">BTC</span></div>
    <div class="sub">Simulated NET output since this page opened</div>
    <div class="heartbeat"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -1054,7 +1067,7 @@ body.unetmine-daily-home #welcomeScreen{
   <div class="disclaimer-box">
     Alpha 1.3 is a modeling and tracking demo. It does not claim guaranteed mining output or investment returns.
     Results depend on the assumptions entered and can change with network conditions, coin price, fees, electricity cost, pool luck, uptime, and stale/rejected shares.
-    Demo defaults were refreshed Oct. 3, 2026; they are not live API feeds.
+    Demo assumptions are illustrative, not live API feeds; change power, network, and price inputs before evaluating results.
   </div>
 </section>
 
@@ -1065,7 +1078,7 @@ body.unetmine-daily-home #welcomeScreen{
    <div class="row"><span>Gross simulated production</span><b id="gross">0.00000000 BTC/day</b></div>
    <div class="row"><span>Pool fee</span><b id="poolCost">−0.00000000 BTC</b></div>
    <div class="row"><span>Electricity</span><b id="elecCost">−0.00000000 BTC</b></div>
-   <div class="row"><span>Electricity cash cost</span><b id="elecCad">C$2.38/day</b></div>
+   <div class="row"><span>Electricity cash cost</span><b id="elecCad">C$5.90/day</b></div>
    <div class="row"><span>Virtual NET output</span><b style="color:var(--green)" id="net2">0.00000000 BTC/day</b></div>
   </div>
   <div class="buybox">
@@ -1080,13 +1093,13 @@ body.unetmine-daily-home #welcomeScreen{
   <div class="inputs">
    <div><label>Electricity (C$/kWh)</label><input id="rate" type="number" step=".001" value=".07"></div>
    <div><label>Pool fee (%)</label><input id="fee" type="number" step=".1" value="2"></div>
-   <div><label id="priceLabel">BTC price (C$)</label><input id="price" type="number" step="1" value="123000"><div id="livePriceStatus" class="live-source">Editable fallback price</div></div>
+   <div><label id="priceLabel">BTC price (C$)</label><input id="price" type="number" step="1" value="123000"><div id="livePriceStatus" class="live-source">Illustrative price • refresh or edit</div></div>
    <div><label id="networkLabel">Network hashrate (EH/s)</label><input id="netHash" type="number" step=".1" value="934"></div>
    <div><label id="issuanceLabel">Modeled network miner rewards / day (BTC)</label><input id="issuance" type="number" step=".01" value="450"></div>
    <div><label id="actualInputLabel">Your actual BTC holdings</label><input id="actual" type="number" step=".00000001" value="0"></div>
   </div>
   <div class="actions quick-actions"><button class="primary" onclick="calc()">Update miner</button><button class="secondary" onclick="refreshLivePrice()">Refresh coin price</button><button class="secondary" onclick="resetStart()">Reset start</button></div>
-  <div class="note">Alpha keeps the trade manual. UNetMine calculates the target; you decide whether and where to buy. No exchange credentials or custody. S21 Pro / Z15 hardware references verified against Bitmain specifications. Demo assumptions refreshed Oct. 3, 2026.</div>
+  <div class="note">Alpha keeps the trade manual. UNetMine calculates the target; you decide whether and where to buy. No exchange credentials or custody. S21 Pro / Z15 hardware references verified against Bitmain specifications. Demo model assumptions are editable and may be stale.</div>
  </div>
 </section>
 
@@ -1266,8 +1279,7 @@ body.unetmine-daily-home #welcomeScreen{
 </div>
 
 <footer>
-UNetMine Alpha 1.4 is an educational simulation and tracking prototype, not a mining service, exchange, brokerage, or promise of returns.
-Public V1 showcases BTC on an Antminer S21 Pro and ZEC on an Antminer Z15. Network and price fields remain editable so the model can be refreshed from current data.
+UNetMine public preview is an educational simulation only, not financial advice or a mining, custody, trading, or brokerage service. All output and the animated counter are modeled estimates, not earned cryptocurrency. Inputs may be stale; actual returns can differ materially. No payments or subscriptions are offered in this demo.
 </footer>
 </div>
 <script>
@@ -1836,7 +1848,7 @@ function applyMinerDefaults(m){
   const p=document.getElementById("price"),nh=document.getElementById("netHash"),iss=document.getElementById("issuance"),act=document.getElementById("actual");
   if(p)p.value=m.priceCad; if(nh)nh.value=m.networkHash; if(iss)iss.value=m.rewardsPerDay;
   const st=state(); if(act)act.value=Number((st.actualByCoin||{})[m.coin]||0);
-  const status=document.getElementById("livePriceStatus"); if(status){status.textContent="Editable fallback price • tap Refresh coin price";status.className="live-source";}
+  const status=document.getElementById("livePriceStatus"); if(status){status.textContent="Illustrative price • tap Refresh coin price";status.className="live-source";}
 }
 function changeMiner(resetInputs=false){
   const key=publicMinerKey((document.getElementById("minerSelect")||{}).value);
@@ -1844,16 +1856,16 @@ function changeMiner(resetInputs=false){
   if(sel)sel.value=key;if(setup)setup.value=key;localStorage.setItem("unetmine-miner",key);
   const m=MINERS[key];
   if(resetInputs) applyMinerDefaults(m);
-  setText("virtualStatus","Virtual "+m.short+" — Online");
+  setText("virtualStatus","Virtual "+m.short+" — Simulation");
   setText("minerName",m.name); setText("coinSub",m.algorithm+" • "+m.coinName+" • virtual NET mining model");
   setText("minerHash",m.hash.toLocaleString()+" "+m.hashUnit); setText("minerPower",m.powerLabel);
   setText("pulseHash",Number(m.hash).toFixed(1)); setText("pulseHashUnit",m.hashUnit);
   setText("physicalTitle","What a physical "+m.short+" would do today"); setText("hardwareCost",m.hardware);
   setText("electricalService",m.service); setText("physicalPower",m.powerLabel);
   setText("heatOutput","≈ "+Math.round(m.powerKw*1000*3.412).toLocaleString()+" BTU/hr"); setText("noiseOutput",m.noise);
-  setText("machineProfile",m.short); setText("priceLabel",m.coin+" price (C$)"); setText("networkLabel","Network hashrate ("+m.networkUnit+")");
+  setText("machineProfile",m.short); setText("priceLabel",m.coin+" reference price (C$)"); setText("networkLabel","Network hashrate ("+m.networkUnit+")");
   setText("issuanceLabel","Modeled network miner rewards / day ("+m.coin+")"); setText("actualInputLabel","Your actual "+m.coin+" holdings");
-  setText("actualOutLabel","Actual "+m.coin+" entered"); setText("coinPriceMetricLabel",m.coin+" / CAD"); setText("assumpPriceLabel",m.coin+" price");
+  setText("actualOutLabel","Actual "+m.coin+" entered"); setText("coinPriceMetricLabel",m.coin+" / CAD • ASSUMPTION"); setText("assumpPriceLabel",m.coin+" price");
   setText("reserveCoinLabel",m.coin+" recorded through settlements");
   const actual=document.getElementById("actual"); if(actual)actual.step=m.coin==="BTC"?".00000001":".000001";
   updateShowcaseButtons(); updateDemoExplainer(); calc();
@@ -4717,8 +4729,8 @@ window.addEventListener("load",()=>setTimeout(renderBillingAdapter,400));
   "user": {
     "user_id": "usr_...",
     "email": "verified@example.com",
-    "display_name": "Ken",
-    "timezone": "America/Edmonton",
+    "display_name": "Sample User",
+    "timezone": "Etc/UTC",
     "currency_code": "CAD"
   },
   "setup": {
