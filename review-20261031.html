@@ -347,7 +347,7 @@ footer{opacity:.9}
 @media(max-width:520px){.mvo-summary{grid-template-columns:1fr}}
 
 
-/* Alpha 1.6 — Subscription Machine Library Foundation */
+/* Machine library styles */
 .machine-library{background:linear-gradient(180deg,rgba(14,31,26,.98),rgba(9,22,19,.98));border:1px solid var(--line);border-radius:18px;padding:20px;margin:0 0 16px}
 .library-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
 .library-head h2{margin:4px 0 7px;font-size:24px}.library-intro{color:var(--muted);margin:0;max-width:780px;line-height:1.55}
@@ -653,7 +653,7 @@ body.unetmine-daily-home #welcomeScreen{
 <div id="welcomeScreen">
   <div class="welcome-card">
     <div class="welcome-brand">UNetMine <span style="color:#91a69d">• Virtual Mining</span></div>
-<div class="unm-preview-stamp" role="status">UPDATED PUBLIC PREVIEW • 31 OCT 2026</div>
+<div class="unm-preview-stamp" role="status">UNETMINE DEMO • REVIEW 4</div>
 <div class="unm-preview-clarifier"><strong>Simulation only — no cryptocurrency is being mined or earned.</strong> Try the model before choosing any real purchase. Illustrative inputs can be edited. No registration or payment required.</div>
     <div class="welcome-title">See what a real miner would produce.<br>Without owning one.</div>
     <div class="welcome-copy">
@@ -687,7 +687,7 @@ body.unetmine-daily-home #welcomeScreen{
 <div id="demoChoiceScreen">
   <div class="demo-choice-card">
     <div class="demo-choice-brand">UNetMine • Interactive Simulation</div>
-<div class="unm-preview-stamp">UPDATED PUBLIC PREVIEW • 31 OCT 2026</div>
+<div class="unm-preview-stamp">UNETMINE DEMO • REVIEW 4</div>
 <div class="unm-preview-clarifier">Mining output and prices are <strong>simulated estimates, not earnings</strong>. The S21 Pro example uses 3,510 W at C$0.07/kWh = <strong>C$5.90/day electricity</strong>.</div>
     <h1>Choose the miner you want to experience.</h1>
     <div class="demo-choice-intro">Pick a real ASIC profile. UNetMine will show what that machine would cost to own, consume in power, produce in crypto, and leave as modeled NET output after costs.</div>
@@ -807,15 +807,7 @@ body.unetmine-daily-home #welcomeScreen{
 </div>
 <header>
  <div><div class="brand"><span>U</span>NetMine</div><div class="tag">Virtual mining. Self-directed coin purchases.</div></div>
- <div class="account-head">
-  <div class="version-badge"><span class="version-dot"></span>UNETMINE DEMO • OCT 2026</div>
-  <button class="account-btn" id="accountOpenBtn" onclick="openAccountModal()">CREATE ACCOUNT / SIGN IN</button>
-  <div class="account-chip" id="accountChip">
-    <div class="account-avatar" id="accountAvatar">U</div>
-    <div class="account-copy"><b id="accountName">Local user</b><small id="accountEmail">Saved on this browser</small></div>
-    <button class="account-out" onclick="signOutLocal()">Sign out</button>
-  </div>
- </div>
+ 
 </header>
 
 
@@ -870,28 +862,28 @@ body.unetmine-daily-home #welcomeScreen{
   </button>
 </section>
 
-<section class="machine-library" id="machineLibrarySection" aria-label="Subscription machine library">
+<section class="machine-library" id="machineLibrarySection" aria-label="Machine library">
   <div class="library-head">
     <div>
-      <div class="eyebrow">Subscription Machine Library</div>
+      <div class="eyebrow">Machine Library</div>
       <h2>Choose the hardware you want to model</h2>
-      <p class="library-intro">Public access includes the complete UNetMine daily experience with two showcase miners. UNetMine Plus expands the machine library. This Alpha can preview the Plus boundary locally; no billing is connected.</p>
+      <p class="library-intro">Try two featured ASIC models in the public demo. Other machine profiles are listed as planned and cannot be selected until verified. No subscription or payment is offered.</p>
     </div>
     <div class="library-plan-box">
-      <small>Prototype access</small>
-      <strong id="libraryPlanLabel">PUBLIC</strong>
-      <button class="secondary" id="plusPreviewBtn" onclick="openPlusPlans()">VIEW PLAN OPTIONS</button>
+      <small>Demo access</small>
+      <strong id="libraryPlanLabel">FEATURED MODELS</strong>
+      
     </div>
   </div>
   
 <div class="plan-boundary-strip">
   <div class="plan-boundary-item">
-    <small>Public / Free</small>
+    <small>Featured demo models</small>
     <b>S21 Pro + Z15 • complete daily UNetMine loop</b>
   </div>
   <div class="plan-boundary-item plus">
-    <small>UNetMine Plus</small>
-    <b>S19 XP + Z11 now • broader curated machine library</b>
+    <small>Planned examples</small>
+    <b>S19 XP + Z11 • additional profiles planned, not selectable</b>
   </div>
 </div>
 
@@ -1074,7 +1066,7 @@ body.unetmine-daily-home #welcomeScreen{
    <div><label id="actualInputLabel">Your actual BTC holdings</label><input id="actual" type="number" step=".00000001" value="0"></div>
   </div>
   <div class="actions quick-actions"><button class="primary" onclick="calc()">Update miner</button><button class="secondary" onclick="refreshLivePrice()">Refresh coin price</button><button class="secondary" onclick="resetStart()">Reset start</button></div>
-  <div class="note">Alpha keeps the trade manual. UNetMine calculates the target; you decide whether and where to buy. No exchange credentials or custody. S21 Pro / Z15 hardware references verified against Bitmain specifications. Demo model assumptions are editable and may be stale.</div>
+  <div class="note">This demo keeps purchases manual. UNetMine calculates the target; you decide whether and where to buy. No exchange credentials or custody. S21 Pro / Z15 hardware references verified against Bitmain specifications. Demo model assumptions are editable and may be stale.</div>
  </div>
 </section>
 
@@ -1225,10 +1217,10 @@ body.unetmine-daily-home #welcomeScreen{
   <div class="ledger-head">
     <div>
       <div class="eyebrow">Production Ledger</div>
-      <h2>Permanent daily virtual-miner record</h2>
+      <h2>Daily virtual-miner history • saved in this browser</h2>
       <p>When you record Match, Adjust, or Pass, UNetMine freezes that day’s modeled economics. Later price or network changes do not rewrite the historical row.</p>
     </div>
-    <div class="pill">ACCOUNT + MINER HISTORY</div>
+    <div class="pill">LOCAL DEMO HISTORY</div>
   </div>
   <div class="ledger-summary">
     <div class="ledger-kpi"><small>Miner-days recorded</small><b id="ledgerDays">0</b></div>
@@ -1742,7 +1734,7 @@ window.onload=()=>{
 </script>
 
 
-<div class="modalback" id="exchangeModal"><div class="modal"><div class="eyebrow">Exchange Router</div><h2 style="margin-top:6px">Choose your purchase destination</h2><div class="sub">UNetMine remembers this preference for your local account. No credentials are requested or stored.</div><div class="exchoices"><div class="exchoice"><div class="exchoice-left"><b>Kraken</b><div class="exchoice-meta">Outbound handoff to Kraken's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Kraken')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>Coinbase</b><div class="exchoice-meta">Outbound handoff to Coinbase's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Coinbase')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>My exchange / Other</b><div class="exchoice-meta">Manual route. UNetMine shows the target; you open your preferred provider yourself.</div></div><button class="secondary" onclick="chooseExchange('Wallet / Other')">Choose</button></div></div><div class="router-disclosure"><strong>Prototype disclosure:</strong> no referral or affiliate tracking is active in this Alpha build.</div><div class="actions"><button class="secondary" onclick="closeExchangeModal()">Close</button></div></div></div>\n<script>
+<div class="modalback" id="exchangeModal"><div class="modal"><div class="eyebrow">Exchange Router</div><h2 style="margin-top:6px">Choose your purchase destination</h2><div class="sub">UNetMine stores this preference in your browser. No exchange credentials are requested or stored.</div><div class="exchoices"><div class="exchoice"><div class="exchoice-left"><b>Kraken</b><div class="exchoice-meta">Outbound handoff to Kraken's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Kraken')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>Coinbase</b><div class="exchoice-meta">Outbound handoff to Coinbase's public coin page.</div></div><button class="secondary" onclick="chooseExchange('Coinbase')">Choose</button></div><div class="exchoice"><div class="exchoice-left"><b>My exchange / Other</b><div class="exchoice-meta">Manual route. UNetMine shows the target; you open your preferred provider yourself.</div></div><button class="secondary" onclick="chooseExchange('Wallet / Other')">Choose</button></div></div><div class="router-disclosure"><strong>Prototype disclosure:</strong> no referral or affiliate tracking is active in this demo.</div><div class="actions"><button class="secondary" onclick="closeExchangeModal()">Close</button></div></div></div>\n<script>
 /* UNetMine Alpha 1.1 — dual-demo shared engine overrides.
    Public showcases: S21 Pro/BTC + Z15/ZEC.
    BUY NET is outbound-only; settlement recording is separate. */
@@ -2160,7 +2152,7 @@ changeMiner=function(...args){alpha141ChangeMinerBase(...args);updateTodayStatus
 window.addEventListener("load",()=>{updateTodayStatus();});
 
 
-/* ===== Alpha 1.6 Subscription Machine Library Foundation =====
+/* ===== Machine library implementation =====
    Public demo remains S21 Pro + Z15. Plus Preview is local prototype access only.
    Engine-ready Plus profiles reuse the same shared BTC/ZEC calculation engine. */
 const PLAN_PREVIEW_KEY="unetmine-plan-preview-v1";
@@ -2187,12 +2179,12 @@ MINERS.s21pro.access="public";MINERS.z15.access="public";
 const LIBRARY_CATALOG=[
   {key:"s21pro",family:"Bitcoin",tier:"public",engine:true,label:"PUBLIC DEMO",why:"Modern BTC showcase"},
   {key:"z15",family:"Zcash",tier:"public",engine:true,label:"PUBLIC DEMO",why:"Equihash showcase"},
-  {key:"s19xp",family:"Bitcoin",tier:"plus",engine:true,label:"PLUS",why:"Popular high-efficiency BTC reference"},
-  {key:"z11",family:"Zcash",tier:"plus",engine:true,label:"PLUS",why:"Used-market Equihash reference"},
-  {key:"l9",family:"Scrypt",tier:"plus",engine:false,label:"PLUS • PROFILE NEXT",name:"Antminer L9",coin:"LTC / DOGE",algorithm:"Scrypt",hashLabel:"Scrypt class",powerLabel:"Profile validation pending",why:"Leading Scrypt category"},
-  {key:"ks5pro",family:"Kaspa",tier:"plus",engine:false,label:"PLUS • PROFILE NEXT",name:"Antminer KS5 Pro",coin:"KAS",algorithm:"kHeavyHash",hashLabel:"Kaspa class",powerLabel:"Profile validation pending",why:"Major Kaspa ASIC category"}
+  {key:"s19xp",family:"Bitcoin",tier:"planned",engine:true,label:"PLANNED",why:"Popular high-efficiency BTC reference"},
+  {key:"z11",family:"Zcash",tier:"planned",engine:true,label:"PLANNED",why:"Used-market Equihash reference"},
+  {key:"l9",family:"Scrypt",tier:"planned",engine:false,label:"PLANNED • MODEL PENDING",name:"Antminer L9",coin:"LTC / DOGE",algorithm:"Scrypt",hashLabel:"Scrypt class",powerLabel:"Profile validation pending",why:"Leading Scrypt category"},
+  {key:"ks5pro",family:"Kaspa",tier:"planned",engine:false,label:"PLANNED • MODEL PENDING",name:"Antminer KS5 Pro",coin:"KAS",algorithm:"kHeavyHash",hashLabel:"Kaspa class",powerLabel:"Profile validation pending",why:"Major Kaspa ASIC category"}
 ];
-function hasPlusPreview(){return localStorage.getItem(PLAN_PREVIEW_KEY)==="plus"}
+function hasPlusPreview(){return false} // Experimental access is not offered in this public demo.
 function engineKeys(){return ["s21pro","z15","s19xp","z11"]}
 function allowedMinerKey(key){
   if(["s21pro","z15"].includes(key))return key;
@@ -2208,44 +2200,37 @@ function libraryEntryData(entry){
 }
 function libraryCard(entry){
   const d=libraryEntryData(entry),plus=hasPlusPreview(),selected=entry.engine&&minerKey()===entry.key;
-  const locked=entry.tier==="plus"&&!plus;
-  const badgeClass=entry.tier==="plus"?(entry.engine?"plus":"pending"):"";
+  const locked=entry.tier==="planned";
+  const badgeClass=entry.tier==="planned"?"pending":"";
   let action="";
   if(!entry.engine) action='<button class="secondary lib-action" disabled>PROFILE COMING</button>';
-  else if(locked) action='<button class="secondary lib-action" onclick="openPlusGate(\''+entry.key+'\')">VIEW PLUS ACCESS</button>';
+  else if(locked) action='<button class="secondary lib-action" disabled>PLANNED PROFILE</button>';
   else action='<button class="primary lib-action" onclick="selectLibraryMiner(\''+entry.key+'\')">'+(selected?'SELECTED ✓':'USE THIS PROFILE')+'</button>';
   return '<article class="library-card '+(selected?'selected ':'')+(locked?'locked':'')+'" data-family="'+entry.family+'">'+
     '<span class="lib-badge '+badgeClass+'">'+entry.label+'</span>'+
     '<h3>'+d.name+'</h3><div class="lib-sub">'+d.coin+' • '+d.algorithm+' • '+d.why+'</div>'+
-    '<div class="lib-specs"><div class="lib-spec"><small>Hashrate</small><b>'+d.hashLabel+'</b></div><div class="lib-spec"><small>Power</small><b>'+d.powerLabel+'</b></div><div class="lib-spec"><small>Efficiency</small><b>'+d.efficiency+'</b></div><div class="lib-spec"><small>Access</small><b>'+(entry.tier==="public"?'Public demo':'UNetMine Plus')+'</b></div></div>'+action+'</article>';
+    '<div class="lib-specs"><div class="lib-spec"><small>Hashrate</small><b>'+d.hashLabel+'</b></div><div class="lib-spec"><small>Power</small><b>'+d.powerLabel+'</b></div><div class="lib-spec"><small>Efficiency</small><b>'+d.efficiency+'</b></div><div class="lib-spec"><small>Access</small><b>'+(entry.tier==="public"?'Featured demo':'Planned')+'</b></div></div>'+action+'</article>';
 }
 function renderMachineLibrary(){
   const grid=document.getElementById("libraryGrid");if(!grid)return;
   const rows=LIBRARY_CATALOG.filter(e=>libraryFilter==="all"||e.family===libraryFilter);
   grid.innerHTML=rows.map(libraryCard).join("");
-  setText("libraryPlanLabel",hasPlusPreview()?"UNETMINE PLUS • PREVIEW":"PUBLIC V1");
-  const btn=document.getElementById("plusPreviewBtn");if(btn)btn.textContent=hasPlusPreview()?"MANAGE PLUS PREVIEW":"VIEW PLAN OPTIONS";
+  setText("libraryPlanLabel","FEATURED DEMO MODELS");
+  
   document.querySelectorAll(".library-filter").forEach(b=>b.classList.toggle("on",b.dataset.filter===libraryFilter));
 }
 function setLibraryFilter(f){libraryFilter=f;renderMachineLibrary()}
 function showMachineLibrary(){renderMachineLibrary();const el=document.getElementById("machineLibrarySection");if(el)el.scrollIntoView({behavior:"smooth",block:"start"})}
 function refreshMinerSelectors(preferred){
-  const plus=hasPlusPreview();
-  const keys=plus?["s21pro","z15","s19xp","z11"]:["s21pro","z15"];
-  const opts=keys.map(k=>{const m=MINERS[k],tag=m.access==="plus"?" • PLUS":"";return '<option value="'+k+'">'+m.coin+' — '+m.name+' • '+m.hash.toLocaleString()+' '+m.hashUnit+tag+'</option>'}).join("");
+  const keys=["s21pro","z15"];
+  const opts=keys.map(k=>{const m=MINERS[k],tag="";return '<option value="'+k+'">'+m.coin+' — '+m.name+' • '+m.hash.toLocaleString()+' '+m.hashUnit+tag+'</option>'}).join("");
   const sel=document.getElementById("minerSelect"),setup=document.getElementById("setupMiner");
   const desired=allowedMinerKey(preferred||localStorage.getItem("unetmine-miner")||(sel||{}).value);
   if(sel){sel.innerHTML=opts;sel.value=desired}if(setup){setup.innerHTML=opts;setup.value=desired}
 }
-function togglePlusPreview(){
-  const enabling=!hasPlusPreview();
-  if(enabling)localStorage.setItem(PLAN_PREVIEW_KEY,"plus");else localStorage.removeItem(PLAN_PREVIEW_KEY);
-  if(!enabling && ["s19xp","z11"].includes(localStorage.getItem("unetmine-miner"))){localStorage.setItem("unetmine-miner","s21pro");}
-  refreshMinerSelectors();changeMiner(true);renderMachineLibrary();
-}
 function selectLibraryMiner(key){
   const entry=LIBRARY_CATALOG.find(e=>e.key===key);if(!entry||!entry.engine)return;
-  if(entry.tier==="plus"&&!hasPlusPreview()){togglePlusPreview();return}
+  if(entry.tier==="planned")return;
   refreshMinerSelectors(key);
   const sel=document.getElementById("minerSelect"),setup=document.getElementById("setupMiner");if(sel)sel.value=key;if(setup)setup.value=key;
   localStorage.setItem("unetmine-miner",key);changeMiner(true);renderMachineLibrary();showToday();
@@ -3725,132 +3710,9 @@ window.returnRecordAdjusted=function(){
 }
 </style>
 
-<div class="modalback plus-modal" id="plusPlanModal">
-  <div class="modal">
-    <div class="plus-hero">
-      <div class="plus-kicker">UNetMine plans</div>
-      <div class="plus-title" id="plusModalTitle">Choose how much hardware you want to model.</div>
-      <div class="plus-sub" id="plusModalSub">
-        The daily mining experience stays available publicly. Plus expands the machine library for users who want to model more ASICs.
-      </div>
-    </div>
 
-    <div class="plus-plans">
-      <div class="plus-plan">
-        <div class="plan-name">Public / Free</div>
-        <h3>UNetMine</h3>
-        <div class="plus-price">C$0 • no payment required</div>
-        <ul class="plus-list">
-          <li><strong>Antminer S21 Pro</strong> — Bitcoin</li>
-          <li><strong>Antminer Z15</strong> — Zcash</li>
-          <li>Daily Home + Daily Miner-Day flow</li>
-          <li>BUY NET handoff + Match / Adjust / Pass</li>
-          <li>Production Ledger + Mine vs Own basics</li>
-        </ul>
-      </div>
 
-      <div class="plus-plan featured">
-        <div class="plan-name">UNetMine Plus</div>
-        <h3>More machines</h3>
-        <div class="plus-price">Price not set yet • Alpha preview only</div>
-        <ul class="plus-list">
-          <li><strong>Everything in Public</strong></li>
-          <li><strong>Antminer S19 XP</strong> — engine-ready BTC profile</li>
-          <li><strong>Antminer Z11</strong> — engine-ready ZEC profile</li>
-          <li>Future curated ASIC profiles as they are validated</li>
-          <li>No fake profiles: unsupported economics stay locked</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="plus-actions">
-      <button class="primary" id="plusPreviewAction" onclick="enablePlusFromPlan()">TRY PLUS PREVIEW</button>
-      <button class="secondary" onclick="closePlusPlans()">Close</button>
-    </div>
-
-    <div class="plus-disclosure">
-      <strong>Prototype only.</strong> No billing, subscription charge, payment information, or automatic renewal exists in this Alpha.
-      Plus Preview only changes local access on this browser.
-    </div>
-    <div class="plus-coming">
-      L9 and KS5 Pro remain visible as “profile next” candidates, but cannot be selected until their mining economics are validated.
-    </div>
-  </div>
-</div>
-
-<script>
-/* ===== Alpha 2.1 / Brick #13 — commercial boundary without fake billing ===== */
-let UNM_PLUS_REQUESTED_KEY=null;
-
-function closePlusPlans(){
-  const m=document.getElementById("plusPlanModal");
-  if(m)m.classList.remove("on");
-  UNM_PLUS_REQUESTED_KEY=null;
-}
-
-function openPlusPlans(){
-  UNM_PLUS_REQUESTED_KEY=null;
-  const title=document.getElementById("plusModalTitle");
-  const sub=document.getElementById("plusModalSub");
-  const btn=document.getElementById("plusPreviewAction");
-  if(title)title.textContent=hasPlusPreview()?"UNetMine Plus Preview is active.":"Choose how much hardware you want to model.";
-  if(sub)sub.textContent=hasPlusPreview()
-    ?"You are currently testing the Plus machine-library boundary locally on this browser."
-    :"The daily mining experience stays available publicly. Plus expands the machine library for users who want to model more ASICs.";
-  if(btn)btn.textContent=hasPlusPreview()?"RETURN TO PUBLIC ACCESS":"TRY PLUS PREVIEW";
-  const m=document.getElementById("plusPlanModal");
-  if(m)m.classList.add("on");
-}
-
-function openPlusGate(key){
-  UNM_PLUS_REQUESTED_KEY=key||null;
-  const entry=LIBRARY_CATALOG.find(e=>e.key===key);
-  const title=document.getElementById("plusModalTitle");
-  const sub=document.getElementById("plusModalSub");
-  const btn=document.getElementById("plusPreviewAction");
-  if(title)title.textContent=entry&&entry.engine ? (libraryEntryData(entry).name+" is in UNetMine Plus.") : "This machine is planned for UNetMine Plus.";
-  if(sub)sub.textContent=entry&&entry.engine
-    ?"The profile is engine-ready, but it sits beyond the two-machine Public library. You can test the Plus boundary locally in this Alpha."
-    :"This machine is visible in the roadmap, but its economics are not validated yet and it cannot be selected.";
-  if(btn){
-    btn.style.display=(entry&&entry.engine)?"inline-block":"none";
-    btn.textContent="TRY PLUS PREVIEW";
-  }
-  const m=document.getElementById("plusPlanModal");
-  if(m)m.classList.add("on");
-}
-
-function enablePlusFromPlan(){
-  const requested=UNM_PLUS_REQUESTED_KEY;
-  const active=hasPlusPreview();
-
-  if(active && !requested){
-    localStorage.removeItem(PLAN_PREVIEW_KEY);
-    if(["s19xp","z11"].includes(localStorage.getItem("unetmine-miner"))){
-      localStorage.setItem("unetmine-miner","s21pro");
-    }
-    refreshMinerSelectors();
-    changeMiner(true);
-    renderMachineLibrary();
-    closePlusPlans();
-    return;
-  }
-
-  if(!active)localStorage.setItem(PLAN_PREVIEW_KEY,"plus");
-  refreshMinerSelectors(requested||undefined);
-  renderMachineLibrary();
-
-  if(requested){
-    const entry=LIBRARY_CATALOG.find(e=>e.key===requested);
-    if(entry&&entry.engine){
-      selectLibraryMiner(requested);
-    }
-  }else{
-    changeMiner(true);
-  }
-  closePlusPlans();
-}
-</script>
 
 <style>
 /* ===== Alpha 2.2 / Brick #14 — 90-day trial + subscription states ===== */
